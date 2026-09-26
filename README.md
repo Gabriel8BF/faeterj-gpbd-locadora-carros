@@ -69,7 +69,7 @@ faeterj-gpbd-locadora-carros/
 
 ## 🚀 Como Executar o Projeto
 
-Para testar o banco de dados localmente, siga o **Passo 1** para ligar o servidor e, em seguida, escolha **apenas uma** das alternativas no **Passo 2** (**Opção A** ou **Opção B**).
+Para testar o banco de dados localmente, siga o **Passo 1** para ligar o servidor e, em seguida, escolha **apenas uma** das alternativas no **Passo 2** (**Opção A**, **Opção B** ou **Opção C**).
 
 ### Passo 1: Iniciar o Servidor Local (Pré-requisito Obrigatório)
 
@@ -79,9 +79,9 @@ Para testar o banco de dados localmente, siga o **Passo 1** para ligar o servido
 
 ---
 
-### Passo 2: Executar os Scripts SQL (Escolha a Opção A ou a Opção B)
+### Passo 2: Executar os Scripts SQL (Escolha a Opção A, B ou C)
 
-#### Opção A — Pela Extensão do VS Code (Recomendado)
+#### Opção A — Pela Extensão do VS Code
 
 1. No VS Code, instale a extensão **MySQL (Database Client)**.
 2. Clique no ícone de Banco de Dados na barra lateral esquerda e clique em **`+` (Create Connection)**.
@@ -90,14 +90,23 @@ Para testar o banco de dados localmente, siga o **Passo 1** para ligar o servido
    * **Port:** `3306`
    * **Username:** `root`
    * **Password:** *(deixe em branco no XAMPP padrão)*
-4. Volte ao **Explorador de Arquivos** do VS Code (`Ctrl + Shift + E`), abra os arquivos da pasta `sql/` na ordem numérica, selecione todo o código com Ctrl + A, e clique no botão **Run SQL (`▶`)** no canto superior direito do editor:
+4. Volte ao **Explorador de Arquivos** do VS Code (`Ctrl + Shift + E`), abra os arquivos da pasta `sql/` na ordem numérica, selecione todo o conteúdo do arquivo com **`Ctrl + A`** e clique no botão **Run SQL (`▷`)** no canto superior direito do editor:
    * 1º: `sql/01_schema_ddl.sql` *(cria o banco `locadora_carros` e as 4 tabelas)*
    * 2º: `sql/02_seed_dml.sql` *(insere os clientes, agências, carros e aluguéis)*
    * 3º: `sql/03_queries_dql.sql` *(exibe as tabelas preenchidas na tela)*
 
-#### Opção B — Via Terminal (Alternativa por Linha de Comando)
+#### Opção B — Pelo MySQL Workbench
 
-Caso prefira não utilizar extensões visuais, você pode executar os arquivos diretamente pelo terminal:
+1. Abra o **MySQL Workbench** e conecte-se à sua instância local (`Root Localhost` — `127.0.0.1:3306`).
+2. No menu superior, vá em **`File > Open SQL Script...`** e abra os três arquivos da pasta `sql/` (eles serão abertos em 3 abas separadas).
+3. Execute cada aba na ordem numérica clicando no ícone do **Raio (`⚡`)** na barra de ferramentas superior:
+   * 1ª Aba: `01_schema_ddl.sql`
+   * 2ª Aba: `02_seed_dml.sql`
+   * 3ª Aba: `03_queries_dql.sql`
+
+#### Opção C — Via Terminal (Linha de Comando)
+
+Caso prefira executar os arquivos diretamente pelo terminal:
 
 ```bash
 # 1. Criar a estrutura do banco de dados e tabelas (DDL)
